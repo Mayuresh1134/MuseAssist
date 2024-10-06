@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+
+    <!-- Music Visualization Section -->
+    <div class="step mb-5">
+        <h2 style="color:#00A8E1;">Music Visualization</h2>
+        <p class="lead">Visualize the waveform of your audio and download the result.</p>
+
+        <!-- Step 1: Upload Audio File -->
+        <div class="step mt-4">
+            <h3>Step 1: Upload Audio File</h3>
+            <form method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <input type="file" class="form-control" name="audio_file_visual" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Upload Audio</button>
+            </form>
+        </div>
+
+        <!-- Step 2: Visualize and Download -->
+        <div class="step mt-4">
+            <h3>Step 2: Waveform Visualization & Download</h3>
+            <p class="lead">Once uploaded, click below to visualize the waveform and download the output file.</p>
+            <form method="POST">
+                <button type="submit" class="btn btn-success">Visualize Waveform</button>
+                <button type="submit" class="btn btn-warning">Download Output</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Genre Transformation Section -->
+    <div class="step">
+        <h2 style="color:#00A8E1;">Genre Transformation</h2>
+        <p class="lead">Transform your audio file into a different genre with instrument selection.</p>
+
+        <!-- Step 1: Upload Audio File -->
+        <div class="step mt-4">
+            <h3>Step 1: Upload Audio File</h3>
+            <form method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <input type="file" class="form-control" name="audio_file_genre" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Upload Audio</button>
+            </form>
+        </div>
+
+        <!-- Step 2: Genre and Instrument Information -->
+        <div class="step mt-4">
+            <h3>Step 2: Genre and Instrument Information</h3>
+            <p class="lead">The system will identify the genre, number of instruments, and instrument names in the uploaded file.</p>
+            <form method="POST">
+                <button type="submit" class="btn btn-info">Get Info</button>
+            </form>
+        </div>
+
+        <!-- Step 3: Select Genre to Transform -->
+        <div class="step mt-4">
+            <h3>Step 3: Select Genre to Transform Into</h3>
+            <form method="POST">
+                <div class="mb-3">
+                    <label for="genre-select" class="form-label">Choose New Genre</label>
+                    <select class="form-select" id="genre-select" name="genre_select" required>
+                        <option value="classical">Classical</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="rock">Rock</option>
+                        <option value="pop">Pop</option>
+                        <option value="hiphop">Hip-Hop</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Transform Genre</button>
+            </form>
+        </div>
+
+        <!-- Step 4: Download Transformed Audio -->
+        <div class="step mt-4">
+            <h3>Step 4: Download Output Audio</h3>
+            <p class="lead">Download the transformed audio in the new genre.</p>
+            <form method="POST">
+                <button type="submit" class="btn btn-warning">Download Transformed Audio</button>
+            </form>
+        </div>
+    </div>
+<br><br>
+</div>
+{% endblock %}

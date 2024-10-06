@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Learning Videos Section -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Learning Videos</h2>
+    <div class="row">
+        <!-- Example Video 1 -->
+        <div class="col-md-4">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=tAh2XhAY9BA" allowfullscreen></iframe>
+            </div>
+            <p class="text-center mt-2">Video Title 1</p>
+        </div>
+        <!-- Example Video 2 -->
+        <div class="col-md-4">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=-3WuQxnA7Hg" allowfullscreen></iframe>
+            </div>
+            <p class="text-center mt-2">Video Title 2</p>
+        </div>
+        <!-- Example Video 3 -->
+        <div class="col-md-4">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=OA-DQPGvdiU" allowfullscreen></iframe>
+            </div>
+            <p class="text-center mt-2">Video Title 3</p>
+        </div>
+    </div>
+</div>
+
+<!-- Chord Training Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Chord Training</h2>
+    <div class="row">
+        <!-- Chord Card 1 -->
+        <div class="col-md-3">
+            <a href="/chord/C" class="card text-center shadow-sm rounded-4 p-4 text-decoration-none">
+                <h5 class="card-title">C Major</h5>
+                <p class="card-text">Click to practice C Major chord.</p>
+            </a>
+        </div>
+        <!-- Chord Card 2 -->
+        <div class="col-md-3">
+            <a href="/chord/D" class="card text-center shadow-sm rounded-4 p-4 text-decoration-none">
+                <h5 class="card-title">D Major</h5>
+                <p class="card-text">Click to practice D Major chord.</p>
+            </a>
+        </div>
+        <!-- Chord Card 3 -->
+        <div class="col-md-3">
+            <a href="/chord/E" class="card text-center shadow-sm rounded-4 p-4 text-decoration-none">
+                <h5 class="card-title">E Major</h5>
+                <p class="card-text">Click to practice E Major chord.</p>
+            </a>
+        </div>
+        <!-- Chord Card 4 -->
+        <div class="col-md-3">
+            <a href="/chord/G" class="card text-center shadow-sm rounded-4 p-4 text-decoration-none">
+                <h5 class="card-title">G Major</h5>
+                <p class="card-text">Click to practice G Major chord.</p>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

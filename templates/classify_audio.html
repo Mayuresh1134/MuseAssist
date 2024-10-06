@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Upload an Audio File to Classify its Genre</h1>
+    
+    {% if prediction %}
+        <h2>Predicted Genre: {{ prediction }}</h2>
+    {% endif %}
+
+    <form action="{{ url_for('classify_audio') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="audio_file" accept="audio/*" required>
+        <button type="submit">Upload and Classify</button>
+    </form>
+    <div style="margin-top: 500px;"></div>
+    {% endblock %}

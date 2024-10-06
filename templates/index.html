@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Image Toggler / Carousel -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://cdn.mos.cms.futurecdn.net/CMSTmw9tLzV7ffUfppimJj.jpg" class="d-block w-100" alt="..." height="400" width="1000">
+        </div>
+        <div class="carousel-item">
+            <img height="400" width="1000" src="" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img height="400" width="1000" src="" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- Website Features -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Website Features</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card shadow-sm rounded-4">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Sheet Music to Audio</h5>
+                    <p class="card-text">For music enthusiasts convert the sheet music you love into audio format</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm rounded-4">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Audio to Sheet Music</h5>
+                    <p class="card-text">A useful tool for the music learners out there.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm rounded-4">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Audio Visualization</h5>
+                    <p class="card-text">Visualize the music audio file.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

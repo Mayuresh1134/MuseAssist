@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Project</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">MuseAssist</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" id="navbar-links">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                        <div class="highlight"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/sheet2music">Sheet To Music</a>
+                        <div class="highlight"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/music2sheet">Music To Sheet</a>
+                        <div class="highlight"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/classify_audio">Music Classification</a>
+                        <div class="highlight"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/audio_visualization">Music Tools</a>
+                        <div class="highlight"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/learn">Learn</a>
+                        <div class="highlight"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container mt-5">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript to handle navbar button highlight on click
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('#navbar-links .nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    // Remove active class from all links
+                    navLinks.forEach(item => item.classList.remove('active'));
+                    // Add active class to the clicked link
+                    this.classList.add('active');
+                });
+            });
+
+            // Highlight the active page based on the URL
+            const currentLocation = location.pathname;
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentLocation) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+<!-- Footer -->
+<footer class="bg-black py-4">
+    <div class="container text-center">
+        <p>&copy; 2024 My Flask App. All rights reserved.</p>
+        <ul class="list-unstyled d-inline-flex">
+            <li class="mx-2"><a href="#" class="text-light">Privacy Policy</a></li>
+            <li class="mx-2"><a href="#" class="text-light">Terms of Service</a></li>
+            <li class="mx-2"><a href="#" class="text-light">Contact Us</a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>

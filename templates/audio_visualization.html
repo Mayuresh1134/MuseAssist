@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+
+    <!-- Music Visualization Section -->
+    <div class="step mb-5">
+        <h2>Music Visualization</h2>
+        <p class="lead">Visualize the waveform of your audio.</p>
+
+        <!-- Step 1: Upload Audio File -->
+        <div class="step mt-4">
+            <h3>Step 1: Upload Audio File</h3>
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <input type="file" class="form-control" name="audio" accept="audio/*" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Upload Audio</button>
+            </form>
+        </div>
+    </div>
+    <div style="margin-top: 300px;"></div>
+
+
+</div>
+{% endblock %}

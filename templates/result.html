@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Audio Analysis Result</h1>
+    <h2>Waveform</h2>
+    <img src="{{ waveform }}" alt="Waveform Image" class="img-fluid">
+    <h2>Audio Properties</h2>
+    <p><strong>Pitch:</strong> {{ instruments.pitch }}</p>
+    <p><strong>Instruments:</strong> {{ instruments.instruments }}</p>
+    <p><strong>Duration:</strong> {{ instruments.duration }} seconds</p>
+    <p><strong>Sample Rate:</strong> {{ instruments.sample_rate }} Hz</p>
+    <a href="/audio_visualization" class="btn btn-secondary">Upload another audio file</a>
+</div>
+{% endblock %}

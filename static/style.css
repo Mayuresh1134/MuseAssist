@@ -1,0 +1,56 @@
+.navbar {
+    background-color: #0F1111; /* Dark Amazon Prime-like color */
+    padding: 0.5rem 1rem;
+}
+
+.footer {
+    
+}
+
+.navbar-brand {
+    color: #00A8E1; /* Prime's blue color */
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #FFFFFF;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background-color: #232F3E; /* Amazon's hover color */
+    color: #FFFFFF;
+    border-color: #00A8E1;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item .highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #00A8E1;
+    visibility: hidden;
+    transition: visibility 0.3s, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.nav-item .nav-link.active + .highlight {
+    visibility: visible;
+    opacity: 1;
+}
+
+.footer {
+    position: relative;
+    background-color: black;
+}

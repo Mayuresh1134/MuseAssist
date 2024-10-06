@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h1>Convert Audio to Sheet Music</h1>
+        <p class="lead">Follow these steps to convert your sheet music into a MIDI file.</p>
+    </div>
+
+    <!-- Step 1: Upload  -->
+    <div class="step mb-5">
+        <h2>Step 1: Upload Audio file</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <input type="file" class="form-control" name="file" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Upload Audio Music</button>
+        </form>
+    </div>
+
+    <!-- Step 2: Convert to MIDI -->
+    <div class="step mb-5">
+        <h2>Step 2: Convert to MIDI</h2>
+        <p class="lead">Once the file is uploaded, click below to generate the MIDI file.</p>
+        <form method="POST">
+            <button type="submit" class="btn btn-success">Convert to MIDI</button>
+        </form>
+    </div>
+
+    <!-- Step 3: Download  -->
+    <div class="step">
+        <h2>Step 3: Download Sheet music File</h2>
+        <p class="lead">After conversion, download the generated sheet file.</p>
+        <form method="POST">
+            <button type="submit" class="btn btn-warning">Download Sheet</button>
+        </form>
+    </div>
+    <br>
+    <br>
+</div>
+{% endblock %}
